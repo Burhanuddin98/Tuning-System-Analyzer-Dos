@@ -1,0 +1,19 @@
+﻿__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+dist/
+build/
+*.egg-info/
+.streamlit/secrets.toml
+
+# Large audio handled by LFS
+*.wav
+*.flac
+*.ogg
+*.mp3
