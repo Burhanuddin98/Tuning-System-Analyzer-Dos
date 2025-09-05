@@ -89,3 +89,4 @@ html = render_html_realtime(spiral_params, ripple_ui, analyser_ui)
 st.components.v1.html(html.replace("{{AUDIO_B64}}", audio_b64)
                         .replace("{{PARAMS_JSON}}", json.dumps(spiral_params | ripple_ui.to_dict() | analyser_ui.to_dict())),
                       height=720)
+

@@ -293,3 +293,4 @@ def render_html_realtime(spiral_params: dict, ripple_ui: RippleUI, analyser_ui: 
 </html>
 """
 
+

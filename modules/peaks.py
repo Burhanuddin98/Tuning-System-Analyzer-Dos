@@ -30,3 +30,4 @@ def extract_global_peaks(y, sr, fmin: float, fmax: float, peak_db: float):
         return np.concatenate(all_f), np.concatenate(all_m)
     return np.array([]), np.array([])
 
+

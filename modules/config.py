@@ -40,3 +40,4 @@ class TuningUI:
     fine_span_hz: float
     def to_dict(self): return asdict(self)
 
+
