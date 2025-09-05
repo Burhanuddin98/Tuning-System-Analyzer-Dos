@@ -14,7 +14,7 @@ with st.sidebar:
     bins_per_turn  = st.slider("Resolution (bins/turn)", 180, 1440, 720, step=60)
     decimate_max   = st.slider("Max points (performance cap)", 500, 8000, 2500, step=100,
                                help="Upper bound on spiral samples sent to the browser. Lower = faster.")
-    spokes         = st.slider("Reference spokes (per 100¢)", 6, 36, 12, step=1)
+    spokes         = st.slider("Reference spokes (per 100)", 6, 36, 12, step=1)
     line_width     = st.slider("Line width (px)", 1, 6, 3, step=1)
 
     st.subheader("Ripple (cardiogram)")
