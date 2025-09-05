@@ -470,16 +470,18 @@ st.components.v1.html(f"""
         showSegments(false); // hide segmented while playing
       }} catch(e) {{ console.error(e); }}
     }});
-    document.getElementById("pause").addEventListener("click", () => {
-      aud.pause();
-      showSegments(true);  // show pretty segmented spiral when paused
-      // snap live line to base so it's clean when paused
-      Plotly.restyle(plotDiv, {
-        x: [Array.from(xbase)],
-        y: [Array.from(ybase)]
-      }, [idxLive]);
-    });
-  </script>
+    document.getElementById("pause").addEventListener("click", () => {{
+  aud.pause();
+  showSegments(true);  // show pretty segmented spiral when paused
+
+  // Snap the live WebGL line back to the base spiral so the paused view is clean.
+  // Use the correct JS trace index we defined earlier: idxLive.
+  Plotly.restyle(plotDiv, {{
+    x: [Array.from(xbase)],
+    y: [Array.from(ybase)]
+  }}, [idxLive]);
+}});</script>
 </body>
 </html>
 """, height=720)
+
