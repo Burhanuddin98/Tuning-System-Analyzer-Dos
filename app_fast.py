@@ -470,15 +470,15 @@ st.components.v1.html(f"""
         showSegments(false); // hide segmented while playing
       }} catch(e) {{ console.error(e); }}
     }});
-    document.getElementById("pause").addEventListener("click", () => {{
+    document.getElementById("pause").addEventListener("click", () => {
       aud.pause();
       showSegments(true);  // show pretty segmented spiral when paused
-      // also snap live line to base so it's clean when paused
-      Plotly.restyle(plotDiv, {{
+      // snap live line to base so it's clean when paused
+      Plotly.restyle(plotDiv, {
         x: [Array.from(xbase)],
         y: [Array.from(ybase)]
-      }}, [ {len(spokes)} + {len(range(int(np.floor(- (turns/2))), int(np.ceil(turns/2)) + 1))} ]); // approx index of live line
-    }});
+      }, [idxLive]);
+    });
   </script>
 </body>
 </html>
