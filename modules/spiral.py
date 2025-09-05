@@ -1,4 +1,4 @@
-# modules/spiral.py
+﻿# modules/spiral.py
 from __future__ import annotations
 import numpy as np
 from modules.config import SpiralUI, RippleUI, AnalyserUI
@@ -172,7 +172,7 @@ def render_html_realtime(spiral_params: dict, ripple_ui: RippleUI, analyser_ui: 
       xaxis:{{ visible:false, range:[-Rmax, Rmax] }},
       yaxis:{{ visible:false, range:[-Rmax, Rmax], scaleanchor:'x', scaleratio:1 }},
       margin:{{ l:10, r:10, t:40, b:10 }},
-      title:"TRUE Spiral — angle: pitch class • radius: octaves (colored; LIVE cardiogram ripples)",
+      title:"TRUE Spiral â€” angle: pitch class â€¢ radius: octaves (colored; LIVE cardiogram ripples)",
     }};
     const plotDiv = document.getElementById('plot');
     Plotly.newPlot(plotDiv, traces, layout);
@@ -245,7 +245,7 @@ def render_html_realtime(spiral_params: dict, ripple_ui: RippleUI, analyser_ui: 
           }}
         }}
 
-        // --- Double spatial smoothing (≈ Gaussian) ---
+        // --- Double spatial smoothing (â‰ˆ Gaussian) ---
         const sm1 = (P.smooth_bins > 1) ? smoothCircular(Array.from(energyLP), P.smooth_bins) : Array.from(energyLP);
         const energySm = (P.smooth_bins > 1) ? smoothCircular(sm1, P.smooth_bins) : sm1;
 
@@ -292,3 +292,4 @@ def render_html_realtime(spiral_params: dict, ripple_ui: RippleUI, analyser_ui: 
 </body>
 </html>
 """
+

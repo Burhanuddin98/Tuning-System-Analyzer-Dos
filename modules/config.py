@@ -1,4 +1,4 @@
-# modules/config.py
+﻿# modules/config.py
 from __future__ import annotations
 from dataclasses import dataclass, asdict
 
@@ -39,3 +39,4 @@ class TuningUI:
     a4_step_fine: float
     fine_span_hz: float
     def to_dict(self): return asdict(self)
+

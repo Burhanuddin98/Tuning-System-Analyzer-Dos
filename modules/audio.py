@@ -1,4 +1,4 @@
-# modules/audio.py
+﻿# modules/audio.py
 from __future__ import annotations
 import io, base64
 import numpy as np
@@ -21,3 +21,4 @@ def to_wav_b64(raw: bytes) -> str:
     buf = io.BytesIO()
     sf.write(buf, y, sr, format="WAV")
     return base64.b64encode(buf.getvalue()).decode('ascii')
+

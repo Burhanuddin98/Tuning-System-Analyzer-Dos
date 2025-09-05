@@ -1,4 +1,4 @@
-# modules/peaks.py
+﻿# modules/peaks.py
 from __future__ import annotations
 import numpy as np
 from scipy.signal import stft, find_peaks
@@ -29,3 +29,4 @@ def extract_global_peaks(y, sr, fmin: float, fmax: float, peak_db: float):
     if all_f:
         return np.concatenate(all_f), np.concatenate(all_m)
     return np.array([]), np.array([])
+

@@ -1,4 +1,4 @@
-# modules/tuning.py
+﻿# modules/tuning.py
 from __future__ import annotations
 import numpy as np
 from typing import Dict, List
@@ -47,3 +47,4 @@ def coarse_to_fine(obs_freqs, obs_mags, systems_dict: Dict[str, Dict], ui: Tunin
         results.append({"name": name, "a4": best["a4"], "offset": best["offset"], "mad_cents": best["mad"]})
     results.sort(key=lambda x: x["mad_cents"])
     return results
+
